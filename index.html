@@ -3,354 +3,254 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Bombay Gym Company</title>
-  <meta name="description" content="Discipline. Strength. Permanence. Bombay Gym Company.">
+  <title>THE BOMBAY GYM COMPANY</title>
+  <meta name="description" content="Built on the spirit of Mumbai — resilient, bold, enduring.">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #0a84ff;
-      --accent: #16c784;
-      --bg: #f8fafc;
-      --card: #fff;
+      --maxw: 740px;
       --ink: #181818;
-      --muted: #868686;
-      --radius: 16px;
-      --shadow: 0 2px 16px rgba(0,0,0,0.06);
-      --maxw: 960px;
+      --muted: #444;
+      --bg: #fcfbfa;
+      --line: #e5e5e5;
+      --radius: 8px;
+      --shadow: 0 2px 12px rgba(0,0,0,0.04);
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'Inter', Arial, sans-serif;
     }
-    body {
+
+    html, body {
       margin: 0;
+      padding: 0;
       background: var(--bg);
       color: var(--ink);
-      font-family: 'Inter', Arial, sans-serif;
-      line-height: 1.7;
+      font-family: var(--sans);
+      font-size: 18px;
     }
-    header {
-      background: var(--card);
-      box-shadow: 0 1px 8px rgba(0,0,0,0.04);
-      position: sticky; top: 0; z-index: 10;
-      padding: 0;
-    }
-    .nav {
-      max-width: var(--maxw);
-      margin: 0 auto;
+
+    body {
       display: flex;
-      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: var(--maxw);
+      margin: 32px 0 0 0;
+      background: var(--bg);
+      padding: 0 32px 32px 32px;
+      width: 100%;
+    }
+
+    header {
+      display: flex;
+      align-items: baseline;
       justify-content: space-between;
-      height: 64px;
-      padding: 0 4vw;
+      margin-bottom: 44px;
+      padding-top: 16px;
     }
+
     .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
+      font-family: var(--serif);
       font-weight: 700;
-      color: var(--primary);
-      letter-spacing: 1px;
-      user-select: none;
+      font-size: 1.38rem;
+      letter-spacing: .5px;
     }
+
     nav {
       display: flex;
       gap: 32px;
     }
+
     nav a {
       color: var(--ink);
+      font-family: var(--serif);
       text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-      padding: 6px 0;
-      position: relative;
+      font-size: 1.05rem;
+      font-weight: 400;
+      letter-spacing: .1px;
       transition: color .18s;
     }
     nav a:hover, nav a:focus {
-      color: var(--primary);
+      color: var(--muted);
     }
+
     .hero {
-      max-width: var(--maxw);
-      margin: 32px auto 0 auto;
-      background: linear-gradient(90deg,#e3f0ff 0%,#f8fafc 100%);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 64px 4vw 40px 4vw;
-      text-align: center;
-      position: relative;
+      margin-bottom: 32px;
     }
     .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.3rem;
+      font-family: var(--serif);
       font-weight: 700;
-      color: var(--ink);
-      margin-bottom: 18px;
-    }
-    .hero-rotate {
-      display: inline-block;
-      position: relative;
-      width: 13ch;
-      height: 1.2em;
-      vertical-align: bottom;
-      overflow: hidden;
-      font-weight: 700;
-      color: var(--accent);
-    }
-    .hero-rotate span {
-      position: absolute;
-      left: 0; right: 0;
-      opacity: 0;
-      transform: translateY(100%);
-      animation: rotateWords 8s infinite;
-      text-align: center;
-    }
-    .hero-rotate span:nth-child(1) { animation-delay: 0s; }
-    .hero-rotate span:nth-child(2) { animation-delay: 2s; }
-    .hero-rotate span:nth-child(3) { animation-delay: 4s; }
-    .hero-rotate span:nth-child(4) { animation-delay: 6s; }
-    @keyframes rotateWords {
-      0% { opacity: 0; transform: translateY(100%);}
-      10% { opacity: 1; transform: translateY(0);}
-      30% { opacity: 1;}
-      40% { opacity: 0; transform: translateY(-100%);}
-      100% {opacity: 0; transform: translateY(-100%);}
+      font-size: 2.35rem;
+      margin-bottom: 12px;
+      line-height: 1.1;
     }
     .hero p {
+      font-family: var(--serif);
+      font-size: 1.15rem;
       color: var(--muted);
-      font-size: 1.1rem;
-      font-weight: 500;
-      margin: 0 auto 20px;
-      max-width: 520px;
+      font-weight: 400;
+      margin-bottom: 30px;
     }
-    .cta-row {
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--line);
+      margin: 32px 0;
+    }
+
+    section {
+      margin-bottom: 24px;
+    }
+    section h2 {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: .2px;
+    }
+    section p {
+      margin: 0 0 16px 0;
+      font-size: 1.05rem;
+      color: var(--ink);
+    }
+
+    .services-row {
       display: flex;
-      gap: 16px;
-      justify-content: center;
-      margin-top: 20px;
+      gap: 18px;
+      margin-bottom: 10px;
       flex-wrap: wrap;
     }
-    .btn {
-      background: var(--primary);
-      color: #fff;
-      border-radius: 32px;
-      font-weight: 700;
+    .service-box {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px 18px 16px 18px;
+      min-width: 175px;
+      flex: 1 1 0;
       font-size: 1rem;
-      padding: 12px 28px;
-      border: none;
-      box-shadow: 0 2px 12px rgba(10,132,255,0.07);
+    }
+    .service-box h3 {
+      font-family: var(--serif);
+      font-size: 1.04rem;
+      margin: 0 0 4px 0;
+      font-weight: 700;
+    }
+    .service-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+    .services-note {
+      font-size: .97rem;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 16px;
+      margin: 18px 0 0 0;
+      flex-wrap: wrap;
+    }
+    .contact-btn {
+      font-family: var(--serif);
+      font-size: 1rem;
+      background: #fff;
+      border: 1.5px solid var(--ink);
+      color: var(--ink);
+      padding: 8px 20px;
+      border-radius: 6px;
       text-decoration: none;
-      transition: background .18s, color .18s;
+      font-weight: 400;
       cursor: pointer;
-      outline: none;
-      border: 2px solid var(--primary);
-      display: inline-block;
+      transition: background .18s, color .18s, border-color .18s;
     }
-    .btn.alt {
-      background: var(--accent);
-      border-color: var(--accent);
-    }
-    .btn:hover, .btn:focus {
+    .contact-btn:hover, .contact-btn:focus {
       background: var(--ink);
       color: #fff;
-      border-color: var(--ink);
+      border-color: var(--muted);
     }
-    .ticker {
-      background: var(--primary);
-      color: #fff;
-      overflow: hidden;
-      font-weight: 600;
-      font-size: 17px;
-      letter-spacing: 1px;
-      margin: 0 0 0 0;
-    }
-    .ticker__track {
-      display: inline-block;
-      white-space: nowrap;
-      padding: 12px 0;
-      will-change: transform;
-      animation: tickerMove 12s linear infinite;
-    }
-    .ticker__track span {
-      margin-right: 40px;
-      opacity: .92;
-    }
-    @keyframes tickerMove {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
-    main {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 48px 4vw 0 4vw;
-    }
-    h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.7rem;
-      font-weight: 700;
-      color: var(--accent);
-      margin-bottom: 32px;
-      text-align: center;
-    }
-    .about {
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 36px 28px;
-      max-width: 540px;
-      margin: 0 auto 48px auto;
-      color: var(--ink);
-      font-size: 1.09rem;
-      text-align: center;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      margin-bottom: 48px;
-    }
-    .service-card {
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 28px 20px;
-      border-left: 7px solid var(--primary);
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      transition: box-shadow .18s, border-color .18s;
-    }
-    .service-card:hover {
-      box-shadow: 0 8px 32px rgba(22,199,132,0.13);
-      border-left: 10px solid var(--accent);
-    }
-    .service-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.2rem;
-      color: var(--primary);
-      font-weight: 700;
-    }
-    .service-desc {
-      color: var(--ink);
-      font-size: 1.04rem;
-    }
-    .contact {
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 36px 28px;
-      max-width: 540px;
-      margin: 0 auto 32px auto;
-      color: var(--ink);
-      text-align: center;
-      font-size: 1.09rem;
-    }
-    .footer {
-      background: var(--card);
+
+    footer {
+      margin-top: 44px;
+      font-size: .95rem;
       color: var(--muted);
-      padding: 28px 0;
-      text-align: center;
-      font-size: 1rem;
-      margin-top: 32px;
-      border-top: 1px solid #e8e8e8;
+      text-align: left;
+      font-family: var(--serif);
     }
+
     @media (max-width: 900px) {
-      .nav { padding: 0 2vw; }
-      .hero { padding: 38px 2vw 28px 2vw; }
-      main { padding: 32px 2vw 0 2vw; }
-      .services { grid-template-columns: 1fr; gap: 24px;}
-      .service-card { padding: 18px 10px; }
-      .about, .contact { padding: 22px 10px; }
+      .container { padding: 0 12px 24px 12px; }
+      header { flex-direction: column; align-items: flex-start; gap: 8px;}
     }
     @media (max-width: 600px) {
-      header { height: 54px; }
-      .nav { height: 54px; }
-      .logo { font-size: 1.15rem; }
-      .hero { padding: 18px 1vw 12px 1vw; border-radius: 8px; }
-      h2 { font-size: 1.1rem; }
-      .service-card { border-left: 4px solid var(--primary); padding: 12px 5px; }
-      .about, .contact { padding: 12px 5px; border-radius: 8px;}
-      .btn { padding: 8px 14px; font-size: .95rem;}
+      .container { padding: 0 2px 12px 2px; }
+      .services-row { flex-direction: column; gap: 8px;}
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="nav">
-      <div class="logo">The Bombay Gym Company</div>
+  <div class="container">
+    <header>
+      <span class="logo">THE BOMBAY GYM COMPANY</span>
       <nav>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#contact">CONTACT</a>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <section class="hero">
-    <h1>
-      Discipline. Strength. Permanence.<br>
-      <span class="hero-rotate" aria-label="rotating words">
-        <span>Progress</span>
-        <span>Consistency</span>
-        <span>Form</span>
-        <span>Focus</span>
-      </span>
-    </h1>
-    <p>
-      Bombay Gym Co. is a fitness movement built on restoring fundamentals.<br>
-      We help you reclaim your strength and set a new standard.
-    </p>
-    <div class="cta-row">
-      <a class="btn" href="#services">Explore Services</a>
-      <a class="btn alt" href="#contact">Get in Touch</a>
-    </div>
-  </section>
+    <section class="hero">
+      <h1>Built on the spirit of Mumbai — resilient, bold, enduring.</h1>
+      <p>A gym company grounded in discipline, strength, and permanence.</p>
+    </section>
 
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker__track">
-      <span>FITNESS · PROGRESS · CONSISTENCY · STRENGTH · FOCUS · FORM · ENDURANCE ·</span>
-      <span>FITNESS · PROGRESS · CONSISTENCY · STRENGTH · FOCUS · FORM · ENDURANCE ·</span>
-    </div>
-  </div>
+    <hr>
 
-  <main>
-    <h2 id="about">About Us</h2>
-    <div class="about">
-      <p>
-        Bombay Gym Co. stands for discipline, strength, and permanence.<br>
-        We’re India’s first vertically driven gym company—restoring what was always ours.<br>
-        No shortcuts, no trends. Just fundamentals, community, and real progress.
-      </p>
-    </div>
+    <section id="about">
+      <h2>ABOUT US</h2>
+      <p>Bombay Gym Co, is built on the spirit of Mumbai – resilient, bold, and enduring. More than a name, it is an identity that draws from the city’s grit, heritage, and uncompromising drive.</p>
+      <p>As India’s first vertically driven gym company, we are not chasing trends but restoring what was always ours — discipline, strength, and permanence.</p>
+    </section>
 
-    <h2 id="services">Our Services</h2>
-    <div class="services">
-      <div class="service-card">
-        <div class="service-title">Gym HQ</div>
-        <div class="service-desc">
-          Our flagship facility, engineered for excellence.<br>
-          HQ sets the gold standard in design, equipment, and ethos—discipline at the core.
+    <hr>
+
+    <section id="services">
+      <h2>SERVICES</h2>
+      <div class="services-row">
+        <div class="service-box">
+          <h3>Open Gym</h3>
+          <p>Deliberate training spaces with clear rules and quality equipment</p>
+        </div>
+        <div class="service-box">
+          <h3>Coached Sessions</h3>
+          <p>Small groups focused on fundamentals, technique, and steady progress.</p>
+        </div>
+        <div class="service-box">
+          <h3>Programming</h3>
+          <p>Simple tracks: Strength - Hypertrophy - Conditioning. Transparent.</p>
         </div>
       </div>
-      <div class="service-card">
-        <div class="service-title">Gym OS (Old Skool)</div>
-        <div class="service-desc">
-          Our philosophy and framework: raw, uncompromising, and authentic.<br>
-          Every franchise operates with integrity, consistency, and true fundamentals.
-        </div>
-      </div>
-    </div>
+      <p class="services-note">Soft launch phase: details to follow.</p>
+    </section>
 
-    <h2 id="contact">Contact</h2>
-    <div class="contact">
-      <p>
-        For inquiries or collaborations, reach out and we'll respond promptly.<br>
-        Let's build something lasting—together!
-      </p>
-      <div class="cta-row">
-        <a class="btn" href="mailto:hello@thebombaygymcompany.com">Email Us</a>
-        <a class="btn alt" href="https://wa.me/0000000000" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn alt" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-      </div>
-    </div>
-  </main>
+    <hr>
 
-  <div class="footer">
-    © <span id="year"></span> The Bombay Gym Company · All rights reserved.
+    <section id="contact">
+      <h2>CONTACT</h2>
+      <p>For inquiries or collaborations, reach out and we’ll respond promptly.</p>
+      <div class="contact-row">
+        <a class="contact-btn" href="mailto:hello@thebombaygymcompany.com">Email Us</a>
+        <a class="contact-btn" href="https://wa.me/0000000000" target="_blank" rel="noopener">Whatsapp</a>
+        <a class="contact-btn" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> THE BOMBAY GYM COMPANY - All rights reserved.
+    </footer>
   </div>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
